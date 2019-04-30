@@ -9,24 +9,18 @@
 			<header>
 				<h1>ABC Child Care</h1>
 				<nav>
-					<ul id='menu'>
-						<li><a class='home' href='index.html'>Home</a></li>
-						<li><a class='prett' title='Menu'>Menu</a>
-						  <ul class='menus'>
-							<li class='has-submenu'><a class='prett' title='Dropdown 1'>Add Users</a>
-							  <ul class='submenu'>
-								<li><a href="studentForm.html" title="Sub Menu">Student</a></li>
-								<li><a href="staff.html" title="Sub Menu">Staff</a></li>
-							  </ul>
-							</li>
-							<li><a href="daily.html" title='Dropdown 2'>Daily Sheet</a></li>
-							<li><a href="contact.html" title='Dropdown 3'>Contact</a></li>
-						  </ul>
+					<ul>
+						<li><a href="" class="current">Home</a></li>
+						<li><a href="userForm.html">Users</a></li>
+						<li><a href="studentForm.html">Student</a></li>
+						<li><a href="">Daily Sheets</a></li>
+					</ul>
 				</nav>
 			</header>
 			<section class="courses" >
-				<form class="myForm" method="post" action="staffForm.php" > 
-          <h2>New User - Staff</h2>
+				<h2>New User</h2>
+				<form class="myForm" method="put" action="" > 
+
 					<p>
 					<label>First Name
 					<input type="text" name="first_name" required>
@@ -68,6 +62,13 @@
 					</select>
 					</label> 
 					</p>
+					
+					
+					<datalist id="destinations">
+					<option value="Airport">
+					<option value="Beach">
+					<option value="Fred Flinstone's House">
+					</datalist>
 					</p>
 					
 					<p>
