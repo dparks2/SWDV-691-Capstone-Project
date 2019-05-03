@@ -1,7 +1,21 @@
+<?php
+           $hostname = "localhost";
+           $username = "id9445115_user";
+           $password = "password";
+           $databaseName = "id9445115_timesaver";
+           // connect to mysql database
+           $connect = mysqli_connect($hostname, $username, $password, $databaseName);
+           $sql = 'SELECT * FROM staff';
+           $query = mysqli_query($connect, $sql);
+                if (!$query) {
+                    die ('SQL Error: ' . mysqli_error($connect));
+}
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
-        <title>Time Saver</title>
+        <title>Time Saver - Reports</title>
         <link href="css/mystyle.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
@@ -32,6 +46,38 @@
 							<div class="imgcontainer">
 								<img src="images/time_saver.png" alt="Avatar" class="avatar">
 							</div>
+							<h1>Student List</h1>
+	<table border="1">
+		<caption class="title">Current Student List</caption>
+		<thead>
+			<tr>
+				<th></th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>System Access</th>
+				<th>Class Room</th>
+			</tr>
+		</thead>
+		<tbody>
+		<?php
+		$no 	= 1;
+		$total 	= 0;
+		while ($row = mysqli_fetch_array($query))
+		{
+			$amount  = $row['amount'] == 0 ? '' : number_format($row['amount']);
+			echo '<tr>
+					<td>'.$no.'</td>
+					<td>'.$row['staff_fname'].'</td>
+					<td>'.$row['staff_lname'].'</td>
+					<td>'.$row['email_address'].'</td>
+					<td>'.$row['system_access'].'</td>
+					<td>'.$row['class_room'].'</td>
+				</tr>';
+				$no++;
+		}?>
+		</tbody>
+	</table>
 						</form>
 			</section>
 			<aside>

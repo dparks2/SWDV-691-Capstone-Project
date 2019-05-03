@@ -2,9 +2,6 @@ header, section, footer, aside, nav, article, figure, figcaption {
     display: block;
 }
 body {
-    color: #666666;
-    background-color: #f9f8f6;
-    background-image: ("images/dark-wood.jpg");
     background-position: center;
     font-family: Georgia, Times, serif;
     line-height: 1.4em;
@@ -18,7 +15,6 @@ body {
 }
 header {
     height: 160px;
-    background-image: url("images/header.jpg");
 }
 h1 {
     text-indent: -9999px;
@@ -28,8 +24,6 @@ h1 {
 }
 nav, footer {
     clear: both;
-    color: #ffffff;
-    background-color: #aeaca8;
     height: 30px;
 }
 nav ul {
@@ -44,12 +38,11 @@ nav li a {
     color: #ffffff;
 }
 nav li a:hover, nav li a.current {
-    color: #000000;
 }
 section.courses {
     float: left;
     width: 659px;
-    border-right: 1px solid #eeeeee;
+    border-right: 1px;
 }
 article {
     clear: both;
@@ -108,37 +101,232 @@ footer {
     font-size: 80%;
     padding: 7px 0px 0px 20px;
 }
+.dropdown-submenu {
+    position: relative;
+}
+  
+  .dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+#menu {
+    background: #343434;
+    color: #;
+    height: 20px;
+    border-bottom: 2px solid #eeeded
+  }
+  
+  #menu ul,
+  #menu li {
+    margin: 0 0;
+    padding: 0 0;
+    list-style: none
+  }
+  
+  #menu ul {
+    height: 35px
+  }
+  
+  #menu li {
+    float: left;
+    display: inline;
+    position: relative;
+    font: bold 12px Arial;
+    text-shadow: 0 -1px 0 #000;
+    border-right: 1px solid #444;
+    border-left: 1px solid #111;
+    text-transform: uppercase
+  }
+  
+  #menu li:first-child {
+    border-left: none
+  }
+  
+  #menu a {
+    display: block;
+    line-height: 20px;
+    padding: 0 14px;
+    text-decoration: none;
+    color: #eee;
+  }
+  
+  #menu li:hover > a,
+  #menu li a:hover {
+    background: #111
+  }
+  
+  #menu input {
+    display: none;
+    margin: 0 0;
+    padding: 0 0;
+    width: 80px;
+    height: 20px;
+    opacity: 0;
+    cursor: pointer
+  }
+  
+  #menu label {
+    font: bold 30px Arial;
+    display: none;
+    width: 20px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center
+  }
+  
+  #menu label span {
+    font-size: 12px;
+    position: absolute;
+    left: 35px
+  }
+  
+  #menu ul.menus {
+    height: auto;
+    width: 180px;
+    background: #111;
+    position: absolute;
+    z-index: 99;
+    display: none;
+    border: 0;
+  }
+  
+  #menu ul.menus li {
+    display: block;
+    width: 100%;
+    font: 12px Arial;
+    text-transform: none;
+  }
+  
+  #menu li:hover ul.menus {
+    display: block
+  }
+  
+  #menu a.home {
+    background: #c00;
+  }
+  
+  #menu a.prett {
+    padding: 0 27px 0 14px
+  }
+  
+  #menu a.prett::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 6px 5px;
+    border-style: solid;
+    border-color: #eee transparent transparent transparent;
+    position: absolute;
+    top: 15px;
+    right: 9px
+  }
+  
+  #menu ul.menus a:hover {
+    background: #333;
+  }
+  
+  #menu ul.menus .submenu {
+    display: none;
+    position: absolute;
+    left: 180px;
+    background: #111;
+    top: 0;
+    width: 180px;
+  }
+  
+  #menu ul.menus .submenu li {
+    background: #111;
+  }
+  
+  #menu ul.menus .has-submenu:hover .submenu {
+    display: block;
+  }
+
+  #show:not(:checked) ~ p { display: none }
 
 
+ /* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+    display: block;
+    float: none;
+    }
+    .cancelbtn {
+    width: 100%;
+    }
+}   
 .myForm {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-size: 0.8em;
-    width: 20em;
+    width: 40em;
     padding: 1em;
-    border: 10px solid #ccc;
+    border: 5px solid #ccc;
     margin: auto;
     }
-    
-    .myForm * {
-    box-sizing: border-box;
-    }
-    
-    .myForm fieldset {
-    border: none;
-    padding: 0;
-    }
-    
-    .myForm legend,
-    .myForm label {
-    padding: 0;
-    font-weight: bold;
-    }
-    
-    .myForm label.choice {
-    font-size: 0.9em;
-    font-weight: normal;
-    }
-    
+
     .myForm input[type="text"],
     .myForm input[type="tel"],
     .myForm input[type="email"],
@@ -146,247 +334,61 @@ footer {
     .myForm select,
     .myForm textarea {
     display: block;
-    width: 100%;
+    width: auto;
     border: 1px solid #ccc;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-size: 0.9em;
     padding: 0.3em;
     }
-    
-    .myForm textarea {
+ .myForm textarea {
     height: 100px;
     }
-    
-    .myForm button {
+
+.myForm2 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 0.8em;
+    width: 60em;
     padding: 1em;
-    border-radius: 0.5em;
-    background: #eee;
-    border: none;
-    font-weight: bold;
-    margin-top: 1em;
-    }
-    
-    .myForm button:hover {
-    background: #ccc;
-    cursor: pointer;
+    border: 5px solid #ccc;
+    margin: auto;
     }
 
-    
-
-    .dropdown-submenu {
-        position: relative;
+    .myForm2 input[type="text"],
+    .myForm2 input[type="tel"],
+    .myForm2 input[type="email"],
+    .myForm2 input[type="datetime-local"],
+    .myForm2 select,
+    .myForm2 textarea {
+    display: block;
+    width: auto;
+    border: 1px solid #ccc;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 0.9em;
+    padding: 0.3em;
     }
-      
-      .dropdown-submenu .dropdown-menu {
-        top: 0;
-        left: 100%;
-        margin-top: -1px;
+ .myForm2 textarea {
+    height: 100px;
     }
 
-    #menu {
-        background: #343434;
-        color: #eee;
-        height: 20px;
-        border-bottom: 2px solid #eeeded
-      }
-      
-      #menu ul,
-      #menu li {
-        margin: 0 0;
-        padding: 0 0;
-        list-style: none
-      }
-      
-      #menu ul {
-        height: 35px
-      }
-      
-      #menu li {
-        float: left;
-        display: inline;
-        position: relative;
-        font: bold 12px Arial;
-        text-shadow: 0 -1px 0 #000;
-        border-right: 1px solid #444;
-        border-left: 1px solid #111;
-        text-transform: uppercase
-      }
-      
-      #menu li:first-child {
-        border-left: none
-      }
-      
-      #menu a {
-        display: block;
-        line-height: 20px;
-        padding: 0 14px;
-        text-decoration: none;
-        color: #eee;
-      }
-      
-      #menu li:hover > a,
-      #menu li a:hover {
-        background: #111
-      }
-      
-      #menu input {
-        display: none;
-        margin: 0 0;
-        padding: 0 0;
-        width: 80px;
-        height: 20px;
-        opacity: 0;
-        cursor: pointer
-      }
-      
-      #menu label {
-        font: bold 30px Arial;
-        display: none;
-        width: 20px;
-        height: 36px;
-        line-height: 36px;
-        text-align: center
-      }
-      
-      #menu label span {
-        font-size: 12px;
-        position: absolute;
-        left: 35px
-      }
-      
-      #menu ul.menus {
-        height: auto;
-        width: 180px;
-        background: #111;
-        position: absolute;
-        z-index: 99;
-        display: none;
-        border: 0;
-      }
-      
-      #menu ul.menus li {
-        display: block;
-        width: 100%;
-        font: 12px Arial;
-        text-transform: none;
-      }
-      
-      #menu li:hover ul.menus {
-        display: block
-      }
-      
-      #menu a.home {
-        background: #c00;
-      }
-      
-      #menu a.prett {
-        padding: 0 27px 0 14px
-      }
-      
-      #menu a.prett::after {
-        content: "";
-        width: 0;
-        height: 0;
-        border-width: 6px 5px;
-        border-style: solid;
-        border-color: #eee transparent transparent transparent;
-        position: absolute;
-        top: 15px;
-        right: 9px
-      }
-      
-      #menu ul.menus a:hover {
-        background: #333;
-      }
-      
-      #menu ul.menus .submenu {
-        display: none;
-        position: absolute;
-        left: 180px;
-        background: #111;
-        top: 0;
-        width: 180px;
-      }
-      
-      #menu ul.menus .submenu li {
-        background: #111;
-      }
-      
-      #menu ul.menus .has-submenu:hover .submenu {
-        display: block;
-      }
 
-      #show:not(:checked) ~ p { display: none }
-
-
-     /* Bordered form */
-    form {
-        border: 3px solid #f1f1f1;
-    }
-    
-    /* Full-width inputs */
-    input[type=text], input[type=password] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
+    .myForm2 * {
         box-sizing: border-box;
-    }
-    
-    /* Set a style for all buttons */
-    button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
+        }
+        
+        .myForm2 fieldset {
         border: none;
-        cursor: pointer;
-        width: 100%;
-    }
-    
-    /* Add a hover effect for buttons */
-    button:hover {
-        opacity: 0.8;
-    }
-    
-    /* Extra style for the cancel button (red) */
-    .cancelbtn {
-        width: auto;
-        padding: 10px 18px;
-        background-color: #f44336;
-    }
-    
-    /* Center the avatar image inside this container */
-    .imgcontainer {
-        text-align: center;
-        margin: 24px 0 12px 0;
-    }
-    
-    /* Avatar image */
-    img.avatar {
-        width: 40%;
-        border-radius: 50%;
-    }
-    
-    /* Add padding to containers */
-    .container {
-        padding: 16px;
-    }
-    
-    /* The "Forgot password" text */
-    span.psw {
-        float: right;
-        padding-top: 16px;
-    }
-    
-    /* Change styles for span and cancel button on extra small screens */
-    @media screen and (max-width: 300px) {
-        span.psw {
-        display: block;
-        float: none;
+        padding: 0;
         }
-        .cancelbtn {
-        width: 100%;
+        
+        .myForm2 legend,
+        .myForm2 label {
+        padding: 0;
+        font-weight: bold;
         }
-    }
+        
+        .myForm2 label.choice {
+        font-size: 0.9em;
+        font-weight: normal;
+        }
+        
+      
